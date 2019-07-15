@@ -1,0 +1,6 @@
+str='''hi gn
+how r u all
+what r u doing'''
+print(len(str))
+words=str.split()
+print(words)
