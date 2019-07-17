@@ -1,0 +1,41 @@
+from flask import Flask,render_template
+app=Flask(__name__)
+
+@app.route('/')
+def index():
+
+    return render_template("index4.html")
+if __name__=="__main__":
+    app.run(port=8000)
+    
+    
+    
+    from flask import Flask
+app = Flask(__name__)
+
+
+@app.route('/python')
+def index2():
+    return ("python programming")
+
+if __name__ == "__main__":
+    app.run(port =5000)
+    
+    
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Redirect</h1>
+<form action="http://127.0.0.1:5000/python">
+
+<button>click here</button>
+
+    </form>
+
+</body>
+</html>   
+    
