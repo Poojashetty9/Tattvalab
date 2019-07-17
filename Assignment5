@@ -1,0 +1,19 @@
+import pandas as pd
+a=pd.read_csv("iris.data")
+print(a)
+print("First two rows")
+print(a.head(2)) #to print first 2 rows
+print("Last two rows")
+print(a.tail(2)) #to [rint last 2 rows
+print("Description")
+print(a.describe())
+print("Axes")
+print(a.axes)
+print("columns name")
+print(a.columns)
+print("grouping columns content")
+print(a.groupby(['5.1']).groups)
+print("using url displaying dataset")
+a=pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data')
+print(a)
+
