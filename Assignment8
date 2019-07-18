@@ -1,0 +1,125 @@
+in.py
+from flask import Flask,render_template,request
+
+app=Flask(__name__)
+
+@app.route('/')
+def submit():
+    return render_template('index.html')
+@app.route('/submit',methods=['GET','POST'])
+def home():
+    return render_template('index5.html')
+@app.route('/submit1',methods=['GET','POST'])
+def about():
+    return render_template('index6.html')
+
+@app.route('/submit2',methods=['GET','POST'])
+def contact():
+    return render_template('index7.html')
+
+@app.route('/submit3',methods=['GET','POST'])
+def feedback():
+    return render_template('index8.html')
+@app.route('/feedback',methods=['GET','POST'])
+def feedback1():
+    return render_template('index9.html')
+
+if __name__=="__main__":
+      app.run()
+
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form name="myForm" method="post" action="submit">
+    <button type="submit" onclick="javascript: form.action='/submit'">home</button>
+    <button type="submit" onclick="javascript: form.action='/submit1'">aboutus</button>
+    <button type="submit" onclick="javascript: form.action='/submit2'">contactus</button>
+    <button type="submit" onclick="javascript: form.action='/submit3'">feedback</button>
+</form>
+
+</body>
+</html>
+
+index1.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<h1>WELCOME TO KLE INSTITUTE OF TECHNOLOGY HUBLI</h1>
+<body><img src="https://engineeringcollege.in/wp-content/uploads/2019/01/3-14.jpg" alt="home">
+
+
+</body>
+</html>
+
+index2.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT US</title>
+</head>
+<body>
+<h2>K. L. E. Institute of Technology, Hubballi was established during the academic year 2008- 2009 by the prestigious K. L. E. Society, Belagavi. It is one of the best evolving engineering colleges of North Karnataka, offering 6 UG and 2 PG courses (MCA & M.Tech) currently, and is located opposite the Hubballi Airport. The KLE Institute of Technology, Hubballi, is affiliated to Visvesvaraya Technological University (VTU), Belagavi and recognised by AICTE, New Delhi.
+Computer Science and Engineering, Electronics and Communication Engineering, Information Science & Engineering and Mechanical Engineering departments are accredited by NBA.
+
+img
+</h2>
+
+</body>
+</html>
+
+index3.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACT</title>
+</head>
+<body>
+<h1>9876644376<br>
+Email:kleit@ac.in</h1>
+</body>
+</html>
+
+index4.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FEEDBACK</title>
+</head>
+<body>
+<form name="myForm" action="/feedback" method="get">
+    Name:<br><input type="text" name="name" id="name"><br>
+    Message:<br><input type="text" name="feedback" id="msg">
+
+    <button type="submit">submit</button>
+</form>
+
+
+
+</body>
+</html>
+
+index5.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>
+    Thank You For Your Valuable Feedback!!!...
+</h1>
+
+</body>
+</html>
