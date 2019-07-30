@@ -1,0 +1,37 @@
+import matplotlib
+from matplotlib import pyplot as plt
+from matplotlib import style
+from mpl_toolkits.mplot3d import Axes3D
+import pandas as pd
+import csv
+style.use('bmh')
+fig=plt.figure()
+
+ax=fig.add_subplot(111,projection='3d')
+
+d=pd.read_csv('iris.csv')
+n=len(d)
+
+for i in range(0,n):
+    if (str(d.iloc[i]['species'])=='setosa'):
+        ax.scatter(d.iloc[i]['sepal_length'],d.iloc[i]['sepal_width'],color='r')
+    if (str(d.iloc[i]['species'])=='versicolor'):
+        ax.scatter(d.iloc[i]['sepal_length'], d.iloc[i]['sepal_width'], color='b')
+    if (str(d.iloc[i]['species'])=='virginica'):
+        ax.scatter(d.iloc[i]['sepal_length'], d.iloc[i]['sepal_width'], color='y')
+
+
+#ax.plot3D('sepal_length','sepal_width','petal_width')
+ax.set_xlabel('sepal_length')
+ax.set_ylabel('sepal_width')
+
+'''d['species'].value_counts().plot.pie(autopct='%1.1f%%',shadow=False,figsize=(8,10))'''
+'''plt.figure(figsize=(10,7))
+x=d['sepal_width']
+plt.hist(x,bins=20,color='cyan')
+plt.title('sepal width')
+plt.xlabel('sepal_length')
+plt.ylabel('count')'''
+plt.savefig("C:\\Users\\Pooja Shetty\\Pictures\\Camera Roll\\3dpicture.png")
+plt.show()
+
